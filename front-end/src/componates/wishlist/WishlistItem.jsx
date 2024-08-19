@@ -5,7 +5,7 @@ import './wishliste.css';
 import { Link } from 'react-router-dom';
 import Notification from '../notification/Notidication'
 
-function Wishlist_item(props) {
+function WishlistItem(props) {
     const { all_product, removefromwish, wishitem, addtocart } = useContext(Shopcontext);
     const [notification, setNotification] = useState({ message: null, type: null });
 
@@ -58,4 +58,4 @@ function Wishlist_item(props) {
     );
 }
 
-export default Wishlist_item;
+export default WishlistItem;
