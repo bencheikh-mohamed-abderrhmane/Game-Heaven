@@ -10,7 +10,7 @@ import Loginsingup from './pages/Loginsingup';
 import Footer from './componates/footer/Footer';
 import menbanner from './componates/assets/menbanner.png'
 import womenbanner from './componates/assets/womenbanner.png'
-import Wishlist from './pages/Wishlist';
+import Wishlist from './pages/WishlistItem';
 import Offerspage from './componates/offers/Offerspage';
 import Latest from './componates/hero/Latest';
 import PaymentPage from './componates/order/PaymentPage'
