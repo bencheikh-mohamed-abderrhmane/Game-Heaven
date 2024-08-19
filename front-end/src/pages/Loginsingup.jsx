@@ -22,7 +22,7 @@ function Loginsignup(props) {
     const login = async () => {
         console.log("login function executed", formData);
         let responseData;
-        await fetch('http://localhost:4000/login', {
+        await fetch('https://game-heaven-back-end.onrender.com/login', {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
@@ -44,7 +44,7 @@ function Loginsignup(props) {
     const signup = async () => {
         console.log("sign up function executed", formData);
         let responseData;
-        await fetch('http://localhost:4000/signup', {
+        await fetch('https://game-heaven-back-end.onrender.com/signup', {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
