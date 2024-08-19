@@ -1,0 +1,98 @@
+.offerspage {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.offerspage h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.offerspage-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.offerspage-items .item {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offerspage-items .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.offerspage-items img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.offerspage-items .item-details {
+    padding: 15px;
+    text-align: center; /* Centre tout le texte, y compris les prix */
+}
+
+.offerspage-items .item-details h3 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+    color: #555;
+    text-align: left; /* Garde le titre aligné à gauche */
+}
+
+.offerspage-items .item-details p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 15px;
+    text-align: left; /* Garde la description alignée à gauche */
+}
+
+.offerspage-items .item-details .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-left: 0; /* Supprime le margin-left */
+}
+
+.offerspage-items .item-details .old-price {
+    font-size: 1rem;
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 10px;
+}
+
+.offerspage-items .item-details button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff4b2b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 0; /* Supprime le margin-left pour centrer */
+}
+
+.offerspage-items .item-details button:hover {
+    background-color: #ff3a1b;
+}
+
+@media (max-width: 768px) {
+    .offerspage-items {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .offerspage-items .item {
+        width: 100%;
+    }
+}

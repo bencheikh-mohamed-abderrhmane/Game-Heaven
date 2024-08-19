@@ -1,0 +1,111 @@
+.loginsignup{
+    width: 100%;
+    height: 115vh;
+    background-color: #fce3fe;
+    padding-top: 100px;
+    margin-bottom: 120px;
+}
+.loginsignup-container{
+    width: 580px;
+    height: 600px;
+    background-color: white;
+    margin: auto;
+    padding: 40px 60px;
+}
+.loginsignup-container h1{
+    margin: 20px 0px;
+
+}
+.loginsignup-fields{
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+    margin-top: 30px;
+
+}
+.loginsignup-fields input{
+    height: 72px;
+    width: 100%;
+    padding-left: 20px;
+    border: 1px solid #c9c9c9;
+    outline: none;
+    color: #5c5c5c;
+    font-size: 18px;
+
+}
+.loginsignup-container button{
+    width: 580px;
+    height: 72px;
+    color: white;
+    background-color: #ff4141;
+    margin-top: 30px;
+    border: none;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.loginsignup-login{
+    margin-top: 20px;
+    color: #5c5c5c;
+    font-size: 18px;
+    font-weight: 500;
+}
+.loginsignup-login span{
+    color: #ff4141;
+    font-weight: 600;
+}
+.loginsignup-agree{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 25px;
+    color: #5c5c5c;
+    font-weight: 500;
+}
+.name{
+    transition: border-color 0.3s ease;
+}
+.name:focus{
+    border-color:  #7CFC00; /* Couleur de bordure sur focus */
+            outline: none; 
+}
+.email{
+    transition: border-color 0.3s ease;
+}
+.email:focus{
+   border-color:  #007BFF;
+}
+.password{
+    transition: border-color 0.3s ease;
+}
+.password:focus{
+    border-color: #7f6f70 ;
+}
+.continue-button:hover {
+    background-color: #45a049; /* Changer la couleur de fond au survol */
+    transform: scale(1.05); /* Agrandir légèrement le bouton */
+  }
+  @media (max-width: 768px) {
+    .loginsignup{
+        height: auto;
+    }
+    .loginsignup-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .loginsignup-container h1 {
+        font-size: 28px;
+    }
+
+    .loginsignup-fields input {
+        height: 56px;
+        font-size: 16px;
+    }
+
+    .loginsignup-container button {
+        width: 100%;
+        height: 56px;
+        font-size: 20px;
+    }
+}

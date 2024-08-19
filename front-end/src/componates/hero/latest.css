@@ -1,0 +1,47 @@
+/* Conteneur principal pour le composant Latest */
+.latest {
+  padding: 20px; /* Espacement intérieur pour le conteneur Latest */
+  
+}
+
+/* Titre du composant Latest */
+.latest h2 {
+  margin-bottom: 20px; /* Espacement sous le titre */
+  font-size: 24px; /* Taille de la police du titre */
+  text-align: center; /* Centrer le texte du titre */
+}
+
+/* Grille pour afficher les produits */
+.latest-grid {
+  display: grid;
+  margin-left: 200px;
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes de largeur égale */
+  gap: 20px; /* Espacement entre les éléments */
+}
+
+/* Style pour chaque élément Item dans le composant Latest */
+.latest-grid .item {
+  border: 1px solid #444; /* Bordure pour délimiter les éléments */
+  border-radius: 8px; /* Coins arrondis */
+  padding: 20px; /* Espacement intérieur */
+  box-sizing: border-box; /* Inclut padding et border dans les dimensions */
+  
+  height: 300px; /* Ajuste la hauteur pour un look plus grand */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Media Queries pour responsivité */
+@media (max-width: 768px) {
+  .latest-grid {
+    grid-template-columns: 1fr; /* Une seule colonne sur petits écrans */
+    margin-left: 0px;
+  }
+
+  .latest-grid .item {
+    height: 300px; /* Ajuste la hauteur pour petits écrans */
+  }
+}

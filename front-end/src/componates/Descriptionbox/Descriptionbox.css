@@ -1,0 +1,39 @@
+.Descriptionbox{
+    margin: 60px 30px;
+
+}
+.Descriptionbox-navigator{
+    display: flex;
+}
+.Descriptionbox-nav-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    width: 171px;
+    height: 70px;
+   border: 1px solid #d0d0d0; 
+}
+.Descriptionbox-nav-box-fade{
+    background:#FBFBFB ;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d0d0d0; 
+    font-size: 16px;
+    font-weight: 600;
+    width: 171px;
+    height: 70px;
+
+}
+.Descriptionbox-description{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border: 1px solid #d0d0d0;
+    padding: 48px;
+    padding-bottom: 70px;
+
+}

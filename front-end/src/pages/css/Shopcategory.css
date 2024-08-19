@@ -1,0 +1,99 @@
+.banner-img {
+    width: 100%;
+    display: block;
+    margin: 30px auto;
+}
+
+.dropdown {
+    width: 15px; /* Adjusted to be more responsive */
+    margin-left: 10px;
+}
+
+.shopcategory-indexsort {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.shopcategory-sort {
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: 1px solid #888888;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.shopcategory-indexsort p span {
+    font-weight: 600;
+}
+
+.shopcategory-products {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    row-gap: 60px;
+    margin-bottom: 100px;
+}
+
+.shopcategory-loadmore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px auto;
+    width: 233px;
+    height: 69px;
+    border-radius: 75px;
+    background-color: #ededed;
+    color: #787878;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.shopcategory-loadmore:hover {
+    background-color: #cfcfcf;
+    color: #606060;
+}
+.shopcategory-products .item {
+    display: flex;
+    flex-direction: column; /* S'assurer que les éléments sont en colonne */
+    align-items: center; /* Centrer les éléments horizontalement */
+    text-align: center;
+}
+
+.item-price {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px; /* Espace entre l'image et le prix */
+}
+
+@media (max-width: 768px) {
+    .shopcategory-products .item {
+        flex-direction: column; /* Pour petits écrans, aligner les éléments en colonne */
+    }
+
+    .item-price {
+        font-size: 16px; /* Réduire la taille de la police si nécessaire */
+        color: #333;
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .shopcategory-indexsort {
+        margin: 0px 10px;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .shopcategory-products {
+        row-gap: 50px;
+    }
+}

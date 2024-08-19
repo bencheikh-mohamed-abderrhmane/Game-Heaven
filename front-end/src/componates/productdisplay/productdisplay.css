@@ -1,0 +1,209 @@
+.productdisplay{
+    display: flex;
+    margin: 0px 20px;
+    margin-bottom: 30px;
+}
+.productdisplay-left{
+    display: flex;
+    gap: 17px;
+}
+.productdisplay-img-list{
+    width: 588px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 588px;
+}
+.productdisplay-right{
+    margin: 0px 70px;
+    display: flex;
+    flex-direction: column;
+}
+.productdisplay-right h1{
+    color: #3d3d3d;
+    font-size: 40px;
+    font-weight: 700;
+}
+.product-img{
+    width: 586px;
+    height: 586px;
+    border: #171A21;
+    border-radius: 20px;
+}
+.productdisplay-right-stars{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 13px;
+    
+    gap: 5px;
+    color: #c1c1c1;
+    font-size: 16px;
+
+}
+
+.productdisplay-right-prices{
+    display: flex;
+    margin: 40px 0px;
+    gap: 30px;
+    font-size: 24px;
+    font-weight: 700;
+
+}
+.productdisplay-right-price-old{
+    color: #818181;
+    text-decoration: line-through;
+
+}
+.productdisplay-right-price-new{
+    color: #ff4141;
+}
+.productdisplay-right-size h1{
+    margin-top: 55px;
+    color: #656565;
+    font-size: 22px;
+    font-weight: 600;
+
+}
+.productdisplay-right-size{
+    display: flex;
+    margin: 30px 0px;
+    gap: 20px;
+}
+.productdisplay-right-size div{
+    padding: 18px;
+    border: 1px solid #ebebeb;
+    color: white;
+    border-radius: 3px;
+   
+    height: 40px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.play{
+    background-color: #003087; 
+}
+.pc{
+    background-color: #171A21; 
+}
+.xbox{
+    background-color: #107C10; 
+    width: 85px;
+}
+.switch{
+    background-color: #E60012; 
+}
+.productdisplay-right button{
+    padding: 20px 40px;
+    width: 200px;
+    font-size :16px; 
+    font-weight: 600;
+    color: white;
+    background-color: #ff4141;
+    margin-bottom: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+.productdisplay-right-description{
+    margin-bottom: 5px;
+}
+.productdisplay-right-category{
+    margin-top: 10px;
+
+}
+.productdisplay-right-category span{
+    font-weight: 600;
+}
+.staricon{
+    width: 40%;
+}
+.wishlist {
+    width: 80px;
+    height: 60px;
+    margin-left: 30px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.wishlist:hover {
+    opacity: 0.8;
+    background-color: #A9A9A9;
+}
+
+
+.additem{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+@media (max-width: 768px) {
+    .productdisplay {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .productdisplay-left {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .productdisplay-img-list {
+        width: 100%;
+        height: auto;
+    }
+
+    .product-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .productdisplay-right {
+        margin: 0;
+        text-align: center; /* Centrer le texte pour une meilleure lisibilité */
+    }
+
+    .productdisplay-right-prices {
+        flex-direction: column; /* Aligner les prix en colonne */
+        gap: 10px; /* Espacement réduit pour les petits écrans */
+    }
+
+    .productdisplay-right-price-old,
+    .productdisplay-right-price-new {
+        font-size: 20px; /* Taille de police réduite pour les petits écrans */
+    }
+
+    .additem {
+        flex-direction: column;
+        gap: 10px; /* Ajouter un espace entre le bouton "ADD TO CART" et l'icône "wishlist" */
+        align-items: center;
+    }
+
+    .productdisplay-right button {
+        width: 100%;
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .wishlist {
+        width: 60px;
+        height: 45px;
+        margin-left: 0; /* Centrer l'icône sous le bouton */
+    }
+   
+    @media (max-width: 768px) {
+        .xbox {
+            background-color: #107C10;
+            width: 60px; /* Adjusted width for mobile */
+            height: 40px; /* Adjusted height for mobile */
+            font-size: 14px; /* Adjusted font size for mobile */
+        }
+        
+        .productdisplay-right-size {
+            gap: 10px; /* Reduce gap between platform options for mobile */
+        }
+    }
+    
+}

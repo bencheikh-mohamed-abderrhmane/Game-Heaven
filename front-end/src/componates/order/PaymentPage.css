@@ -1,0 +1,135 @@
+/* Style pour la page de paiement */.payment-page {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 08px16pxrgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .payment-page h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+    font-weight: 700;
+    position: relative;
+  }
+  
+  .payment-pageh2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: #28a745;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 5px;
+  }
+  
+  .payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    position: relative;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #555;
+    font-size: 15px;
+  }
+  
+  .form-group input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .form-group input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 008pxrgba(0, 123, 255, 0.3);
+    outline: none;
+  }
+  
+  .payment-options {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .payment-optionslabel {
+    font-weight: 500;
+    color: #444;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .payment-options input[type="radio"] {
+    accent-color: #28a745;
+    transform: scale(1.2);
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #218838;
+    transform: translateY(-3px);
+  }
+  
+  .submit-button:active {
+    background-color: #1e7e34;
+    transform: translateY(0);
+  }
+  
+  /* Animation */@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive design */@media (max-width: 600px) {
+    .payment-page {
+      padding: 20px;
+      margin: 20px;
+    }
+  
+    .payment-pageh2 {
+      font-size: 24px;
+    }
+  
+    .form-groupinput[type="text"] {
+      font-size: 14px;
+    }
+  
+    .submit-button {
+      font-size: 16px;
+    }
+  }
+  

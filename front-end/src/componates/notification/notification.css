@@ -1,0 +1,20 @@
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.notification.cart {
+    background-color: #28a745; /* Vert pour le panier */
+}
+
+.notification.wishlist {
+    background-color: #dc3545; /* Rouge pour la wishlist */
+}
+
