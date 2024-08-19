@@ -1,5 +1,5 @@
 import React from 'react';
-import Wishlist_item from '../componates/wishlist/Wishlist_item';
+import Wishlist_item from '../componates/wishlist/WishlistItem';
 
 
 
