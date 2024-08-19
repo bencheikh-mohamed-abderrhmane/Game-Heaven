@@ -6,7 +6,7 @@ function Offerspage() {
     const [offers, setOffers] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:4000/offers')
+        fetch('https://game-heaven-front-end.onrender.com/offers')
             .then((response) => response.json())
             .then((data) => setOffers(data));
     }, []);
