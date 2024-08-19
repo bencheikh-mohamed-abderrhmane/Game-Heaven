@@ -78,6 +78,35 @@ const Product = mongoose.model("Product", {
     },
 });
 
+async function updateImageURLs() {
+    const localHostURL = "http://localhost:4000";
+    const productionURL = "https://game-heaven-back-end.onrender.com";
+
+    try {
+        // Trouver tous les produits avec une image stockée en localhost
+        const products = await Product.find({ image: { $regex: localHostURL } });
+
+        for (let product of products) {
+            // Remplacer l'URL localhost par l'URL de production
+            const updatedImageURL = product.image.replace(localHostURL, productionURL);
+
+            // Mettre à jour le produit dans la base de données
+            await Product.updateOne({ _id: product._id }, { $set: { image: updatedImageURL } });
+            console.log(`Updated product ID ${product.id}: ${updatedImageURL}`);
+        }
+
+        console.log("All image URLs updated successfully!");
+    } catch (error) {
+        console.error("Error updating image URLs:", error);
+    } finally {
+        mongoose.connection.close();
+    }
+}
+
+// Exécuter le script
+updateImageURLs();
+
+
 // Endpoint to add a product
 app.post('/addproduct', async (req, res) => {
     let products = await Product.find({});
