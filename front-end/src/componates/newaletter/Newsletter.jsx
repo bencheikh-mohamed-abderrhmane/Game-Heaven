@@ -6,11 +6,9 @@ function Newsletter(props) {
     const [message, setMessage] = useState('');
 
     const validateEmail = (email) => {
-        // Utilisation d'une regex pour une meilleure validation de l'e-mail
-        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()[\]\.,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,})$/i;
-
-        return re.test(String(email).toLowerCase());
-    }
+        // Validation simple de l'email sans regex
+        return email.includes('@') && email.includes('.');
+    };
 
     const handleSubmit = () => {
         if (email.trim() === '') {
