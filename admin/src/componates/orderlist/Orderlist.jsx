@@ -7,7 +7,7 @@ function Orderlist() {
 
     useEffect(() => {
         // Récupérer les commandes via l'API getOrders
-        fetch('http://localhost:4000/getOrders')
+        fetch('https://game-heaven-back-end.onrender.com/getOrders')
             .then(response => response.json())
             .then(data => setOrders(data))
             .catch(error => {
