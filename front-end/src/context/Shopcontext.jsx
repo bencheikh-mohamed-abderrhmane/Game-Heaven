@@ -16,12 +16,12 @@ const ShopcontextProvider = (props) => {
     const [wishitem, setWishitem] = useState({});
 
     useEffect(() => {
-        fetch('http://localhost:4000/allproducts')
+        fetch('https://game-heaven-back-end.onrender.com/allproducts')
             .then((response) => response.json())
             .then((data) => setAll_product(data));
     
             if (localStorage.getItem('auth-token')) {
-                fetch('http://localhost:4000/getcart', {
+                fetch('https://game-heaven-back-end.onrender.com/getcart', {
                     method: 'POST',
                     headers: {
                         Accept: 'application/json',
@@ -34,7 +34,7 @@ const ShopcontextProvider = (props) => {
                 .then((data) => setCartitem(data));
     
                 // Fetch wishlist items if authenticated
-                fetch('http://localhost:4000/getwish', {
+                fetch('https://game-heaven-back-end.onrender.com/getwish', {
                     method: 'POST',
                     headers: {
                         Accept: 'application/json',
@@ -59,7 +59,7 @@ const ShopcontextProvider = (props) => {
         setCartitem((prev) => ({ ...prev, [itemid]: prev[itemid] + 1 }));
         
         if (localStorage.getItem('auth-token')) {
-            fetch('http://localhost:4000/addtocart', {
+            fetch('https://game-heaven-back-end.onrender.com/addtocart', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
@@ -89,7 +89,7 @@ const ShopcontextProvider = (props) => {
     
             // After updating the wish item state, send a request to the backend if the user is authenticated
             if (localStorage.getItem('auth-token')) {
-                fetch('http://localhost:4000/addtowish', {
+                fetch('https://game-heaven-back-end.onrender.com/addtowish', {
                     method: 'POST',
                     headers: {
                         Accept: 'application/json',
@@ -121,7 +121,7 @@ const ShopcontextProvider = (props) => {
         });
     
         if (localStorage.getItem('auth-token')) {
-            fetch('http://localhost:4000/removefromwish', {
+            fetch('https://game-heaven-back-end.onrender.com/removefromwish', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
@@ -143,7 +143,7 @@ const ShopcontextProvider = (props) => {
         setCartitem((prev) => ({ ...prev, [itemid]: prev[itemid] - 1 }));
         
         if (localStorage.getItem('auth-token')) {
-            fetch('http://localhost:4000/removefromcart', {
+            fetch('https://game-heaven-back-end.onrender.com/removefromcart', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
