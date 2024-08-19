@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Notification from '../notification/Notidication'
 
 function Wishlist_item(props) {
-    const { all_product, addtowish, removefromwish, wishitem, addtocart } = useContext(Shopcontext);
+    const { all_product, removefromwish, wishitem, addtocart } = useContext(Shopcontext);
     const [notification, setNotification] = useState({ message: null, type: null });
 
     const handleAddToCart = (id) => {
