@@ -98,9 +98,7 @@ async function updateImageURLs() {
         console.log("All image URLs updated successfully!");
     } catch (error) {
         console.error("Error updating image URLs:", error);
-    } finally {
-        mongoose.connection.close();
-    }
+    } 
 }
 
 // Exécuter le script
