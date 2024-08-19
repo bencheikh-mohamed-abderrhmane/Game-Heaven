@@ -189,6 +189,7 @@ const ShopcontextProvider = (props) => {
         wishitem,
         all_product,
         cartitem,
+        getDefaultWish,
         addtocart,
         removefromcart,
         setCartitem,
