@@ -1,12 +1,12 @@
 import React from 'react';
-import Wishlist_item from '../componates/wishlist/WishlistItem';
+import WishlistItem from '../componates/wishlist/WishlistItem';
 
 
 
 function Wishlist(props) {
     return (
         <div>
-            <Wishlist_item/>
+            <WishlistItem/>
         </div>
     );
 }
