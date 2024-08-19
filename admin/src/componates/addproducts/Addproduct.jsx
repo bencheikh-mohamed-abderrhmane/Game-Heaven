@@ -34,7 +34,7 @@ function Addproduct(props) {
         let formData = new FormData();
         formData.append('product', image);
 
-        await fetch('http://localhost:4000/upload', {
+        await fetch('https://game-heaven-back-end.onrender.com/upload', {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
@@ -49,7 +49,7 @@ function Addproduct(props) {
             console.log(product);
 
             // Save product to the database
-            await fetch('http://localhost:4000/addproduct', {
+            await fetch('https://game-heaven-back-end.onrender.com/addproduct', {
                 method: 'POST',
                 headers: {
                     Accept:'application/json',
