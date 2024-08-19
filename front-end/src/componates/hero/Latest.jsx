@@ -6,7 +6,7 @@ function Latest() {
     const [new_collection, setNew_collection] = useState([]);
 
     useEffect(() => {
-        fetch('https://game-heaven-front-end.onrender.com/newcollections')
+        fetch('https://game-heaven-back-end.onrender.com/newcollections')
             .then((response) => response.json())
             .then((data) => setNew_collection(data));
     }, []);
