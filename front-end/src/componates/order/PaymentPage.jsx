@@ -12,7 +12,7 @@ const PaymentPage = () => {
 
   useEffect(() => {
     // Récupérer le panier de l'utilisateur via l'API getCart
-    fetch('http://localhost:4000/getcart')
+    fetch('https://game-heaven-back-end.onrender.com/getcart')
       .then(response => response.json())
       .then(data => setCart(data))
       .catch(error => console.error('Erreur lors de la récupération du panier:', error));
@@ -30,7 +30,7 @@ const PaymentPage = () => {
     };
 
     // Envoyer les informations au backend pour les traiter
-    fetch('http://localhost:4000/sendOrder', {
+    fetch('https://game-heaven-back-end.onrender.com/sendOrder', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
