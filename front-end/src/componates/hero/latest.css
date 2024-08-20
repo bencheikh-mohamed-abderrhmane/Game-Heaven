@@ -1,32 +1,30 @@
 /* Conteneur principal pour le composant Latest */
 .latest {
-  padding: 20px; /* Espacement intérieur pour le conteneur Latest */
-  
+  padding: 30px; /* Augmentation du padding pour écrans plus grands */
 }
 
 /* Titre du composant Latest */
 .latest h2 {
-  margin-bottom: 20px; /* Espacement sous le titre */
-  font-size: 24px; /* Taille de la police du titre */
-  text-align: center; /* Centrer le texte du titre */
+  margin-bottom: 30px; /* Augmentation de l'espacement sous le titre pour un meilleur équilibre visuel */
+  font-size: 28px; /* Augmentation de la taille de la police pour écrans plus grands */
+  text-align: center; 
 }
 
 /* Grille pour afficher les produits */
 .latest-grid {
   display: grid;
-  margin-left: 200px;
+  margin-left: 250px; /* Augmentation de la marge pour écrans plus grands */
   grid-template-columns: repeat(2, 1fr); /* Deux colonnes de largeur égale */
-  gap: 20px; /* Espacement entre les éléments */
+  gap: 25px; /* Augmentation de l'espacement entre les éléments */
 }
 
 /* Style pour chaque élément Item dans le composant Latest */
 .latest-grid .item {
-  border: 1px solid #444; /* Bordure pour délimiter les éléments */
-  border-radius: 8px; /* Coins arrondis */
-  padding: 20px; /* Espacement intérieur */
-  box-sizing: border-box; /* Inclut padding et border dans les dimensions */
-  
-  height: 300px; /* Ajuste la hauteur pour un look plus grand */
+  border: 1px solid #444; 
+  border-radius: 10px; /* Légère augmentation du rayon des coins arrondis */
+  padding: 25px; /* Augmentation de l'espacement intérieur */
+  box-sizing: border-box; 
+  height: 350px; /* Augmentation de la hauteur pour un meilleur look sur les grands écrans */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,14 +32,36 @@
   text-align: center;
 }
 
-/* Media Queries pour responsivité */
+/* Media Queries pour écrans de résolution 1380x768 */
+@media (max-width: 1380px) {
+  .latest {
+    padding: 20px; 
+  }
+
+  .latest h2 {
+    margin-bottom: 20px;
+    font-size: 24px; 
+  }
+
+  .latest-grid {
+    margin-left: 200px;
+    gap: 20px;
+  }
+
+  .latest-grid .item {
+    height: 300px; 
+    padding: 20px;
+  }
+}
+
+/* Media Queries pour petits écrans */
 @media (max-width: 768px) {
   .latest-grid {
-    grid-template-columns: 1fr; /* Une seule colonne sur petits écrans */
+    grid-template-columns: 1fr; 
     margin-left: 0px;
   }
 
   .latest-grid .item {
-    height: 300px; /* Ajuste la hauteur pour petits écrans */
+    height: 300px; 
   }
 }
