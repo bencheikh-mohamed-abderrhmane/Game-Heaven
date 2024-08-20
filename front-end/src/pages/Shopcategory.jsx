@@ -6,7 +6,7 @@ import dropdown_icon from '../componates/assets/dropdown.png';
 
 function Shopcategory(props) {
     const { all_product } = useContext(Shopcontext);
-    const [visibleItems, setVisibleItems] = useState(12); // État pour gérer le nombre d'éléments visibles
+    const [visibleItems, setVisibleItems] = useState(15); // État pour gérer le nombre d'éléments visibles
     const [sortOrder, setSortOrder] = useState('asc'); // État pour gérer l'ordre de tri (ascendant par défaut)
 
     // Filtrer les produits par catégorie
