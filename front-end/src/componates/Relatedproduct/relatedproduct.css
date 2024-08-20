@@ -1,30 +1,51 @@
-.relatedproduct{
+.relatedproduct {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
     height: 70vh;
-
 }
-.relatedproduct h1{
+
+.relatedproduct h1 {
     color: #171717;
     font-size: 50px;
     font-weight: 600;
 }
-.relatedproduct hr{
+
+.relatedproduct hr {
     width: 200px;
     height: 6px;
     border-radius: 10px;
     background: #252525;
-
 }
-.relatedproducts-item{
+
+.relatedproducts-item {
     margin-top: 50px;
     display: flex;
     gap: 20px;
 }
+
+/* Styles spécifiques pour les écrans de 1920px et plus */
+@media (min-width: 1920px) {
+    .relatedproduct h1 {
+        font-size: 60px; /* Augmentation de la taille du titre pour les grands écrans */
+    }
+
+    .relatedproducts-item {
+        gap: 30px; /* Augmentation de l'espacement entre les éléments pour les grands écrans */
+    }
+
+    .relatedproduct hr {
+        width: 300px; /* Augmentation de la largeur de la ligne */
+        height: 8px; /* Augmentation de la hauteur de la ligne */
+    }
+}
+
+/* Styles pour les écrans de 768px et moins */
 @media (max-width: 768px) {
-      .relatedproduct{height: auto;}
+    .relatedproduct {
+        height: auto;
+    }
      
     .relatedproduct h1 {
         font-size: 30px; /* Réduction de la taille du titre pour mobile */
