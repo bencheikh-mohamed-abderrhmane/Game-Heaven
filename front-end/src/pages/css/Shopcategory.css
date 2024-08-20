@@ -2,24 +2,25 @@
     width: 100%;
     display: block;
     margin: 30px auto;
+    max-width: 1920px; /* Limite la largeur maximale de la bannière pour les grands écrans */
 }
 
 .dropdown {
-    width: 15px; /* Adjusted to be more responsive */
+    width: 20px; /* Augmenté pour une meilleure visibilité sur les grands écrans */
     margin-left: 10px;
 }
 
 .shopcategory-indexsort {
     display: flex;
     flex-wrap: wrap;
-    margin: 0px 20px;
+    margin: 0px 40px; /* Ajustement de la marge pour les grands écrans */
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 .shopcategory-sort {
-    padding: 10px 20px;
+    padding: 15px 30px; /* Ajusté pour être plus visible sur les grands écrans */
     border-radius: 40px;
     border: 1px solid #888888;
     cursor: pointer;
@@ -32,9 +33,9 @@
 }
 
 .shopcategory-products {
-    margin: 20px;
+    margin: 20px 40px; /* Ajustement de la marge pour les grands écrans */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Augmenté pour des produits plus larges sur grand écran */
     row-gap: 60px;
     margin-bottom: 100px;
 }
@@ -44,12 +45,12 @@
     justify-content: center;
     align-items: center;
     margin: 150px auto;
-    width: 233px;
-    height: 69px;
+    width: 300px; /* Augmenté pour une meilleure visibilité sur grand écran */
+    height: 80px; /* Augmenté pour une meilleure visibilité sur grand écran */
     border-radius: 75px;
     background-color: #ededed;
     color: #787878;
-    font-size: 18px;
+    font-size: 20px; /* Augmenté pour une meilleure visibilité sur grand écran */
     cursor: pointer;
     font-weight: 500;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -59,6 +60,7 @@
     background-color: #cfcfcf;
     color: #606060;
 }
+
 .shopcategory-products .item {
     display: flex;
     flex-direction: column; /* S'assurer que les éléments sont en colonne */
@@ -67,25 +69,17 @@
 }
 
 .item-price {
-    font-size: 18px;
+    font-size: 20px; /* Augmenté pour une meilleure visibilité sur grand écran */
     color: #333;
     margin-top: 10px; /* Espace entre l'image et le prix */
 }
 
-@media (max-width: 768px) {
-    .shopcategory-products .item {
-        flex-direction: column; /* Pour petits écrans, aligner les éléments en colonne */
-    }
-
-    .item-price {
-        font-size: 16px; /* Réduire la taille de la police si nécessaire */
-        color: #333;
-    }
-}
-
-
 /* Responsive Design */
 @media (max-width: 768px) {
+    .shop-category{
+        background-color: #1C1C1C;
+        color: white;
+    }
     .shopcategory-indexsort {
         margin: 0px 10px;
         flex-direction: column;
@@ -95,5 +89,15 @@
 
     .shopcategory-products {
         row-gap: 50px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .shopcategory-indexsort {
+        margin: 0px 50px; /* Ajustement de la marge pour les très grands écrans */
+    }
+
+    .shopcategory-products {
+        margin: 20px 50px; /* Ajustement de la marge pour les très grands écrans */
     }
 }
