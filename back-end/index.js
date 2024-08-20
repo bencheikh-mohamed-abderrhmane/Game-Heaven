@@ -255,7 +255,7 @@ app.get('/newcollections',async(req,res)=>{
 // creating end point for popular women
 app.get('/popularinwomen',async(req,res)=>{
     let products = await Product.find({category:"women"})
-    let popular_in_women = products.slice(0,4);
+    let popular_in_women = products.slice(0,5);
     console.log("popular in women fetched")
     res.send(popular_in_women)
 })
