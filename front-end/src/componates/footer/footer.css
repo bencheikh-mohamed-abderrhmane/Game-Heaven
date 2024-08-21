@@ -75,7 +75,9 @@
     font-size: 20px;
     text-align: center;
 }
-
+.lien{
+    color: #383838;
+}
 .footer-copyright hr{
     width: 80%;
     border: none;
@@ -106,6 +108,12 @@
 
     .footer-icons-container img {
         height: 100px;
+    }
+    .footer-logo{width: 100%;
+        
+    }
+    .footer-logo img{
+        width: 30%;
     }
 
 }
