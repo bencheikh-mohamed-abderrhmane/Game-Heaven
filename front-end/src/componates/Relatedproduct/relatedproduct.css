@@ -2,14 +2,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    height: 70vh;
+    gap: 20px; /* Augmentation de l'espacement global */
+    padding: 20px; /* Ajout de padding pour un meilleur espacement intérieur */
+    height: 100%; /* Utilisation de 100% de la hauteur pour plus de flexibilité */
+    background: linear-gradient(180deg, #ff9a9e 0%, #fad0c4 50%, #ff9a9e 100%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ajout d'une légère ombre */
+    border-radius: 15px; /* Ajout d'un léger arrondi pour un aspect plus doux */
 }
 
 .relatedproduct h1 {
     color: #171717;
     font-size: 50px;
     font-weight: 600;
+    margin-bottom: 10px; /* Ajout d'un espacement en bas */
 }
 
 .relatedproduct hr {
@@ -17,47 +22,52 @@
     height: 6px;
     border-radius: 10px;
     background: #252525;
+    margin: 0 auto; /* Centrage de la ligne */
 }
 
 .relatedproducts-item {
-    margin-top: 50px;
+    margin-top: 40px;
     display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de s'ajuster dans un espace restreint */
+    justify-content: center; /* Centre les éléments horizontalement */
     gap: 20px;
 }
 
 /* Styles spécifiques pour les écrans de 1920px et plus */
 @media (min-width: 1920px) {
     .relatedproduct h1 {
-        font-size: 60px; /* Augmentation de la taille du titre pour les grands écrans */
+        font-size: 60px;
     }
 
     .relatedproducts-item {
-        gap: 30px; /* Augmentation de l'espacement entre les éléments pour les grands écrans */
+        gap: 30px;
     }
 
     .relatedproduct hr {
-        width: 300px; /* Augmentation de la largeur de la ligne */
-        height: 8px; /* Augmentation de la hauteur de la ligne */
+        width: 300px;
+        height: 8px;
     }
 }
 
 /* Styles pour les écrans de 768px et moins */
 @media (max-width: 768px) {
     .relatedproduct {
+        padding: 10px; /* Réduction du padding pour s'adapter aux petits écrans */
         height: auto;
     }
      
     .relatedproduct h1 {
-        font-size: 30px; /* Réduction de la taille du titre pour mobile */
+        font-size: 30px;
+        margin-bottom: 5px; /* Réduction de l'espacement en bas */
     }
 
     .relatedproducts-item {
-        gap: 10px; /* Réduction de l'espacement entre les éléments */
-        flex-direction: column; /* Empilement des éléments pour mobile */
+        gap: 10px;
+        flex-direction: column;
     }
 
     .relatedproduct hr {
-        width: 100px; /* Réduction de la largeur de la ligne */
-        height: 3px; /* Réduction de la hauteur de la ligne */
+        width: 100px;
+        height: 3px;
     }
 }
