@@ -248,7 +248,7 @@ app.post('/login', async (req, res) => {
 // creating end point for new collection data
 app.get('/newcollections',async(req,res)=>{
     let products = await Product.find({})
-    let newcollection = products.slice(1).slice(-8)
+    let newcollection = products.slice(0).slice(-10)
     console.log("newcollection fecthed")
     res.send(newcollection)
 })
