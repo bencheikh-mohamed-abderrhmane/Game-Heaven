@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Centre verticalement les éléments enfants */
     gap: 10px;
     height: 65vh;
     background: linear-gradient(180deg, #11998e 0%, #38ef7d 50%, #11998e 100%);
@@ -62,6 +63,7 @@
     .popular-item {
         gap: 15px;
         flex-wrap: wrap;
+        margin-left: 10px;
     }
 }
 
