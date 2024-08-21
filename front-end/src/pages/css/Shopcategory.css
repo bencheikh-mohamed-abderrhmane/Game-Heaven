@@ -1,103 +1,117 @@
+/* Style général pour le conteneur de la catégorie */
+.shop-category {
+    padding: 20px;
+    margin: 0 auto;
+    background: linear-gradient(180deg, #00416a 0%, #00c6ff 50%, #43e97b 100%);
+
+    color: white;
+
+}
+
+/* Style pour l'image de la bannière */
 .banner-img {
     width: 100%;
-    display: block;
-    margin: 30px auto;
-    max-width: 1920px; /* Limite la largeur maximale de la bannière pour les grands écrans */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
 }
 
-.dropdown {
-    width: 20px; /* Augmenté pour une meilleure visibilité sur les grands écrans */
-    margin-left: 10px;
-}
-
+/* Style pour le conteneur du tri et de l'index */
 .shopcategory-indexsort {
     display: flex;
-    flex-wrap: wrap;
-    margin: 0px 40px; /* Ajustement de la marge pour les grands écrans */
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
+    margin-bottom: 20px;
 }
 
+/* Style pour le tri des produits */
 .shopcategory-sort {
-    padding: 15px 30px; /* Ajusté pour être plus visible sur les grands écrans */
-    border-radius: 40px;
-    border: 1px solid #888888;
-    cursor: pointer;
     display: flex;
     align-items: center;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-.shopcategory-indexsort p span {
-    font-weight: 600;
+/* Style pour l'icône de dropdown */
+.dropdown {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
 }
 
+/* Style pour le conteneur des produits */
 .shopcategory-products {
-    margin: 20px 40px; /* Ajustement de la marge pour les grands écrans */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Augmenté pour des produits plus larges sur grand écran */
-    row-gap: 60px;
-    margin-bottom: 100px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    color: #3f3f3f;
+    
 }
 
-.shopcategory-loadmore {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 150px auto;
-    width: 300px; /* Augmenté pour une meilleure visibilité sur grand écran */
-    height: 80px; /* Augmenté pour une meilleure visibilité sur grand écran */
-    border-radius: 75px;
-    background-color: #ededed;
-    color: #787878;
-    font-size: 20px; /* Augmenté pour une meilleure visibilité sur grand écran */
-    cursor: pointer;
-    font-weight: 500;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.shopcategory-loadmore:hover {
-    background-color: #cfcfcf;
-    color: #606060;
-}
-
+/* Style pour chaque élément (Item) dans le conteneur */
 .shopcategory-products .item {
-    display: flex;
-    flex-direction: column; /* S'assurer que les éléments sont en colonne */
-    align-items: center; /* Centrer les éléments horizontalement */
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour le bouton "Explore more" */
+.shopcategory-loadmore {
+    margin-top: 20px;
+    padding: 10px 20px;
     text-align: center;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.item-price {
-    font-size: 20px; /* Augmenté pour une meilleure visibilité sur grand écran */
-    color: #333;
-    margin-top: 10px; /* Espace entre l'image et le prix */
+/* Styles responsive */
+@media (max-width: 1200px) {
+    .shopcategory-products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-    .shop-category{
-        background-color: #1C1C1C;
-        color: white;
-    }
     .shopcategory-indexsort {
-        margin: 0px 10px;
         flex-direction: column;
-        gap: 10px;
-        text-align: center;
+        align-items: flex-start;
+    }
+
+    .shopcategory-sort {
+        margin-top: 10px;
     }
 
     .shopcategory-products {
-        row-gap: 50px;
+        grid-template-columns: 1fr;
+    }
+
+    .shopcategory-loadmore {
+        width: 100%;
     }
 }
 
-@media (min-width: 1440px) {
-    .shopcategory-indexsort {
-        margin: 0px 50px; /* Ajustement de la marge pour les très grands écrans */
+@media (max-width: 480px) {
+    .shop-category {
+        padding: 15px;
     }
 
-    .shopcategory-products {
-        margin: 20px 50px; /* Ajustement de la marge pour les très grands écrans */
+    .banner-img {
+        border-radius: 5px;
+    }
+
+    .shopcategory-indexsort {
+        margin-bottom: 15px;
+    }
+
+    .shopcategory-products .item {
+        padding: 10px;
+    }
+    .shopcategory-products{
+        width: 80%;
     }
 }
