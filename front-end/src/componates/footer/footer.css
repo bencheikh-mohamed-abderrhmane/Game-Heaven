@@ -88,6 +88,7 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .footer{margin-top: 50px;}
     .footer-logo p {
         font-size: 36px;
     }
@@ -114,6 +115,7 @@
     }
     .footer-logo img{
         width: 30%;
+        margin-left: 15px;
     }
 
 }
