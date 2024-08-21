@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState } from 'react';
 import './css/Shopcategory.css';
 import { Shopcontext } from '../context/Shopcontext';
 import Item from '../componates/items/Item';
@@ -6,8 +6,8 @@ import dropdown_icon from '../componates/assets/dropdown.png';
 
 function Shopcategory(props) {
     const { all_product } = useContext(Shopcontext);
-    const [visibleItems, setVisibleItems] = useState(15);
-    const [sortOrder, setSortOrder] = useState('asc');
+    const [visibleItems, setVisibleItems] = useState(15); // État pour gérer le nombre d'éléments visibles
+    const [sortOrder, setSortOrder] = useState('asc'); // État pour gérer l'ordre de tri (ascendant par défaut)
 
     // Filtrer les produits par catégorie
     const filteredProducts = all_product.filter(item => item.category === props.category);
@@ -23,9 +23,10 @@ function Shopcategory(props) {
 
     // Fonction pour charger plus d'éléments
     const loadMoreItems = (event) => {
-        event.preventDefault();
+        event.preventDefault(); // Empêche le comportement par défaut, si nécessaire
         setVisibleItems(prevVisibleItems => {
-            const newVisibleItems = prevVisibleItems + 12;
+            const newVisibleItems = prevVisibleItems + 12; // Augmente de 12 éléments supplémentaires
+            // Faire défiler la page vers le bas de la hauteur de la fenêtre
             window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
             return newVisibleItems;
         });
@@ -36,23 +37,8 @@ function Shopcategory(props) {
         setSortOrder(prevSortOrder => (prevSortOrder === 'asc' ? 'desc' : 'asc'));
     };
 
-    // Intégration de Tawk.to
-    useEffect(() => {
-        // Ne pas déclarer Tawk_API avec const, let, ou var, utilisez-le simplement comme objet global
-        window.Tawk_API = window.Tawk_API || {};
-        window.Tawk_LoadStart = new Date();
-        (function() {
-            var s1 = document.createElement("script"),
-                s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/66c5b0ddea492f34bc087454/1i5q3loq8';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    }, []);
-
     return (
+        
         <div className='shop-category'>
             <img className="banner-img" src={props.banner} alt="" />
             <div className="shopcategory-indexsort">
@@ -85,4 +71,4 @@ function Shopcategory(props) {
     );
 }
 
-export default Shopcategory;
+export default Shopcategory
