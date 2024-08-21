@@ -2,54 +2,69 @@ import React, { useContext, useState } from "react";
 import "./navbar.css";
 import icon from "../assets/iconshop.png";
 import logo from "../assets/logoshop.png";
-import { Link } from "react-router-dom";
-import wishlist_icon from '../assets/wishlist.png'
-import { Shopcontext } from '../../context/Shopcontext'
+import wishlist_icon from '../assets/wishlist.png';
+import { Link, useNavigate } from "react-router-dom";
+import { Shopcontext } from '../../context/Shopcontext';
 
 const Navbar = () => {
   const [menu, setMenu] = useState("");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { getTotalItem } = useContext(Shopcontext);
+  const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem('auth-token'); // Correction de l'erreur de syntaxe
-    window.location.replace('/');
+    localStorage.removeItem('auth-token');
+    navigate('/');
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <div className="navbar">
+    <nav className="navbar">
       <div className="nav-logo">
-        <img src={logo} alt="" />
+        <img className="image-logo" src={logo} alt="Shop Logo" />
         <p>shopper</p>
       </div>
-      <ul className="nav-menu">
+      <div className={`burger ${isMenuOpen ? "active" : ""}`} onClick={toggleMenu}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul className={`nav-menu ${isMenuOpen ? "active" : ""}`}>
         <li onClick={() => setMenu("shop")}>
-          <Link style={{ textDecoration: 'none' }} to='/'>shop</Link>
+          <Link className="nav-link" to="/" onClick={toggleMenu}>shop</Link>
           {menu === "shop" ? <hr /> : null}
         </li>
         <li onClick={() => setMenu("mens")}>
-          <Link style={{ textDecoration: 'none' }} to='/mens'>men</Link>
+          <Link className="nav-link" to="/mens" onClick={toggleMenu}>men</Link>
           {menu === "mens" ? <hr /> : null}
         </li>
         <li onClick={() => setMenu("womens")}>
-          <Link style={{ textDecoration: 'none' }} to='/womens'>women</Link>
+          <Link className="nav-link" to="/womens" onClick={toggleMenu}>women</Link>
           {menu === "womens" ? <hr /> : null}
         </li>
         <li onClick={() => setMenu("kids")}>
-          <Link style={{ textDecoration: 'none' }} to='/kids'>kid</Link>
+          <Link className="nav-link" to="/kids" onClick={toggleMenu}>kid</Link>
           {menu === "kids" ? <hr /> : null}
         </li>
       </ul>
       <div className="nav-login-cart">
         {localStorage.getItem('auth-token') ? (
-          <button onClick={handleLogout}>LogOut</button> // Utilisation de la fonction `handleLogout`
+          <button className="login" onClick={handleLogout}>LogOut</button>
         ) : (
-          <Link to='/login'><button>Login</button></Link>
+          <Link to='/login'><button className="login">Login</button></Link>
         )}
-        <Link to='/wishlist'><img className="wish-icon" src={wishlist_icon} alt="" /></Link>
-        <Link to='/cart'><img className="nav-login-cart-img" src={icon} alt="" /></Link>
+        <Link to='/wishlist'>
+          <img className="wish-icon" src={wishlist_icon} alt="Wishlist Icon" />
+        </Link>
+        <Link to='/cart'>
+          <img className="nav-login-cart-img" src={icon} alt="Cart Icon" />
+        </Link>
         <div className="nav-cart-count">{getTotalItem()}</div>
       </div>
-    </div>
+    </nav>
   );
 }
 
