@@ -17,7 +17,7 @@ function Footer(props) {
                 <li>Products</li>
                 <li>Offices</li>
                 <li>About</li>
-               <a href="https://portfolio-p574.onrender.com" <li>Contact</li></a>
+               <a className='lien' href="https://portfolio-p574.onrender.com/"> <li>Contact</li></a>
             </ul>
             <div className="footer-social-icon">
                 <div className="footer-icons-container">
