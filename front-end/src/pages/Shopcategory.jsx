@@ -38,7 +38,9 @@ function Shopcategory(props) {
 
     // Intégration de Tawk.to
     useEffect(() => {
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        // Ne pas déclarer Tawk_API avec const, let, ou var, utilisez-le simplement comme objet global
+        window.Tawk_API = window.Tawk_API || {};
+        window.Tawk_LoadStart = new Date();
         (function() {
             var s1 = document.createElement("script"),
                 s0 = document.getElementsByTagName("script")[0];
