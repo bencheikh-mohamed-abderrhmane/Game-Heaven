@@ -5,10 +5,12 @@
     align-items: center;
     gap: 10px;
     height: 65vh;
+    background: linear-gradient(180deg, #11998e 0%, #38ef7d 50%, #11998e 100%);
+    color: #333333;
 }
 
 .popular h1 {
-    color: #171717;
+    color: #D3D3D3;
     font-size: 3rem; /* Augmentation de la taille pour écrans plus larges */
     font-weight: 600;
     text-align: center;
@@ -24,6 +26,7 @@
 .popular-item {
     margin-top: 30px;
     display: flex;
+    color: #171717;
     justify-content: center;
     gap: 30px; /* Augmentation de l'espace pour les écrans plus larges */
 }
@@ -77,5 +80,6 @@
 
     .popular-item {
         gap: 10px;
+        margin-left: 10px;
     }
 }
