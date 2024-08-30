@@ -137,6 +137,35 @@
     flex-direction: row;
     
 }
+.chat-app {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFD700; /* Jaune futuriste */
+    color: #333; /* Couleur du texte */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 40px;
+    height: 40px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.chat-app p {
+    margin: 0;
+}
+
+.chat-app:hover {
+    background-color: #FFEA00; /* Jaune néon au survol */
+    color: #000; /* Couleur du texte au survol */
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+}
+
+.chat-app:active {
+    background-color: #FFC107; /* Jaune un peu plus foncé lorsqu'on clique */
+    transform: scale(0.98); /* Réduction légère de la taille lors du clic */
+}
 
 
 @media (max-width: 768px) {
@@ -203,6 +232,13 @@
         
         .productdisplay-right-size {
             gap: 10px; /* Reduce gap between platform options for mobile */
+        }
+        .chat-app{
+            width: 85%;
+            height: auto;
+            margin-left: 0px;
+            margin-bottom: 20px;
+            margin-top: 20px;
         }
     }
     
