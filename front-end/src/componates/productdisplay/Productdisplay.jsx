@@ -73,9 +73,11 @@ function Productdisplay(props) {
                     </div>
                 </div>
                 <div className="additem">
-                    <button onClick={() => { handleAddToCart(product.id) }}>ADD TO CART</button>
+                    <button onClick={() => { handleAddToCart(product.id) }}>ADD TO CART </button>
                     <img onClick={() => { handleAddToWish(product.id) }} className='wishlist' src={wish_icon} alt="" />
+                   <a className='chat-app' href="https://kakrot191919az.web.app/"> <p>give your opinion on the game 🗣️</p></a>
                 </div>
+                <p></p>
                 <p className="productdisplay-right-category"><span>Category :</span>{product.category}, Game</p>
                 <p className="productdisplay-right-category"><span>Tags :</span>#{product.category}, #Gaming, #promotions</p>
             </div>
